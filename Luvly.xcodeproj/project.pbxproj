@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		BBD001942CD2E8B100882D3A /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BBD001932CD2E8B100882D3A /* FirebaseAnalytics */; };
+		BBD001962CD2E8B100882D3A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BBD001952CD2E8B100882D3A /* FirebaseAuth */; };
+		BBD001982CD2E8B100882D3A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BBD001972CD2E8B100882D3A /* FirebaseFirestore */; };
+		BBD0019A2CD2E8B100882D3A /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BBD001992CD2E8B100882D3A /* FirebaseMessaging */; };
+		BBD0019C2CD2E8B100882D3A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BBD0019B2CD2E8B100882D3A /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		BB32F1222CCC384E000AA032 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +37,38 @@
 		BB32F12B2CCC384E000AA032 /* LuvlyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuvlyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		BB32F1432CCC38F0000AA032 /* Exceptions for "Luvly" folder in "Luvly" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = BB32F1102CCC384D000AA032 /* Luvly */;
+		};
+		BBD001902CD2E7B400882D3A /* Exceptions for "Luvly" folder in "LuvlyTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = BB32F1202CCC384E000AA032 /* LuvlyTests */;
+		};
+		BBD001912CD2E7B400882D3A /* Exceptions for "Luvly" folder in "LuvlyUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"GoogleService-Info.plist",
+			);
+			target = BB32F12A2CCC384E000AA032 /* LuvlyUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		BB32F1132CCC384D000AA032 /* Luvly */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				BB32F1432CCC38F0000AA032 /* Exceptions for "Luvly" folder in "Luvly" target */,
+				BBD001902CD2E7B400882D3A /* Exceptions for "Luvly" folder in "LuvlyTests" target */,
+				BBD001912CD2E7B400882D3A /* Exceptions for "Luvly" folder in "LuvlyUITests" target */,
+			);
 			path = Luvly;
 			sourceTree = "<group>";
 		};
@@ -52,6 +89,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD0019A2CD2E8B100882D3A /* FirebaseMessaging in Frameworks */,
+				BBD001942CD2E8B100882D3A /* FirebaseAnalytics in Frameworks */,
+				BBD001962CD2E8B100882D3A /* FirebaseAuth in Frameworks */,
+				BBD0019C2CD2E8B100882D3A /* FirebaseStorage in Frameworks */,
+				BBD001982CD2E8B100882D3A /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +154,11 @@
 			);
 			name = Luvly;
 			packageProductDependencies = (
+				BBD001932CD2E8B100882D3A /* FirebaseAnalytics */,
+				BBD001952CD2E8B100882D3A /* FirebaseAuth */,
+				BBD001972CD2E8B100882D3A /* FirebaseFirestore */,
+				BBD001992CD2E8B100882D3A /* FirebaseMessaging */,
+				BBD0019B2CD2E8B100882D3A /* FirebaseStorage */,
 			);
 			productName = Luvly;
 			productReference = BB32F1112CCC384D000AA032 /* Luvly.app */;
@@ -195,6 +242,9 @@
 			);
 			mainGroup = BB32F1082CCC384D000AA032;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = BB32F1122CCC384D000AA032 /* Products */;
 			projectDirPath = "";
@@ -393,16 +443,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Luvly/Luvly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Luvly/Preview Content\"";
+				DEVELOPMENT_TEAM = MD6V295626;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luvly/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Permission Always and When In Use";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Permission Always";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Permission When In Use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -421,16 +478,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Luvly/Luvly.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Luvly/Preview Content\"";
+				DEVELOPMENT_TEAM = MD6V295626;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Luvly/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Location Permission Always and When In Use";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Location Permission Always";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Location Permission When In Use";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,6 +616,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BBD001932CD2E8B100882D3A /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BBD001952CD2E8B100882D3A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BBD001972CD2E8B100882D3A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BBD001992CD2E8B100882D3A /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		BBD0019B2CD2E8B100882D3A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BBD001922CD2E8B100882D3A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BB32F1092CCC384D000AA032 /* Project object */;
 }
